@@ -9,6 +9,7 @@ const sections = [
   { id: "ch3", label: "Глава 3" },
   { id: "conclusion", label: "Заключение" },
   { id: "literature", label: "Литература" },
+  { id: "appendix", label: "Приложения" },
 ];
 
 export default function Index() {
@@ -126,6 +127,7 @@ export default function Index() {
                 ["3.3. Йога и растяжка", "9"],
                 ["Заключение", "10"],
                 ["Список литературы", "11"],
+                ["Приложения", "12"],
               ].map(([name, page]) => (
                 <tr key={name}>
                   <td style={{ color: "#222" }}>{name}</td>
@@ -292,6 +294,105 @@ export default function Index() {
           </ol>
         </section>
 
+        {/* ПРИЛОЖЕНИЯ */}
+        <section id="appendix" style={pageStyle}>
+          <h2 style={chapterTitle}>ПРИЛОЖЕНИЯ</h2>
+
+          <p style={{ ...paraStyle, textIndent: 0, marginBottom: 32, color: "#444" }}>
+            В данном разделе представлены иллюстративные материалы, дополняющие основное содержание реферата.
+          </p>
+
+          {/* Приложение 1 */}
+          <div style={appendixBlock}>
+            <p style={appendixLabel}>Приложение 1</p>
+            <p style={appendixCaption}>
+              Рисунок 1. Строение сердечно-сосудистой системы человека и влияние физических нагрузок на её работу
+            </p>
+            <div style={imgWrap}>
+              <img
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/71034138-88d2-4c4d-bb10-d3398192f3aa.jpg"
+                alt="Сердечно-сосудистая система"
+                style={imgStyle}
+              />
+            </div>
+            <p style={appendixDesc}>
+              Регулярные физические нагрузки укрепляют миокард, снижают частоту сердечных сокращений в покое и нормализуют артериальное давление. У тренированных людей объём сердца на 30–40% больше, чем у нетренированных.
+            </p>
+          </div>
+
+          {/* Приложение 2 */}
+          <div style={appendixBlock}>
+            <p style={appendixLabel}>Приложение 2</p>
+            <p style={appendixCaption}>
+              Рисунок 2. Основные виды физической активности и охватываемые группы мышц
+            </p>
+            <div style={imgWrap}>
+              <img
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/d97444fe-ad3e-461c-b308-404dc5c98d61.jpg"
+                alt="Виды спорта"
+                style={imgStyle}
+              />
+            </div>
+            <p style={appendixDesc}>
+              Различные виды спорта воздействуют на разные группы мышц и системы организма. Для гармоничного развития рекомендуется сочетать аэробные нагрузки, силовые упражнения и упражнения на гибкость.
+            </p>
+          </div>
+
+          {/* Приложение 3 */}
+          <div style={{ ...appendixBlock, borderBottom: "none", paddingBottom: 0 }}>
+            <p style={appendixLabel}>Приложение 3</p>
+            <p style={appendixCaption}>
+              Рисунок 3. Статистика снижения риска заболеваний при регулярных занятиях спортом (по данным ВОЗ, 2022)
+            </p>
+            <div style={imgWrap}>
+              <img
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/6386be98-c640-451d-baaf-a40aead92281.jpg"
+                alt="Статистика здоровья"
+                style={imgStyle}
+              />
+            </div>
+            <p style={appendixDesc}>
+              По данным Всемирной организации здравоохранения, регулярная физическая активность снижает риск сердечно-сосудистых заболеваний на 35%, сахарного диабета 2 типа — на 40%, некоторых видов онкологических заболеваний — на 20–30%.
+            </p>
+          </div>
+
+          {/* Таблица */}
+          <div style={{ marginTop: 48 }}>
+            <p style={appendixLabel}>Приложение 4</p>
+            <p style={appendixCaption}>
+              Таблица 1. Рекомендуемый объём физической активности для разных возрастных групп (ВОЗ)
+            </p>
+            <table style={tableStyle}>
+              <thead>
+                <tr style={{ background: "#f0f0f0" }}>
+                  <th style={thStyle}>Возраст</th>
+                  <th style={thStyle}>Вид активности</th>
+                  <th style={thStyle}>Норма в неделю</th>
+                  <th style={thStyle}>Примечание</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["5–17 лет", "Умеренная и интенсивная", "≥ 60 мин/день", "Включая силовые 3 р/нед."],
+                  ["18–64 года", "Умеренная аэробная", "≥ 150–300 мин", "Или 75–150 мин интенсивной"],
+                  ["18–64 года", "Силовые упражнения", "≥ 2 раза в неделю", "Все группы мышц"],
+                  ["65+ лет", "Умеренная аэробная", "≥ 150 мин", "Упражнения на баланс 3 р/нед."],
+                ].map(([age, type, norm, note], i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#fafafa" }}>
+                    <td style={tdStyle}>{age}</td>
+                    <td style={tdStyle}>{type}</td>
+                    <td style={tdStyle}>{norm}</td>
+                    <td style={tdStyle}>{note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p style={{ fontSize: 12, color: "#666", marginTop: 8, fontStyle: "italic", fontFamily: "Times New Roman, serif" }}>
+              Источник: ВОЗ. Глобальные рекомендации по физической активности для здоровья. — Женева, 2022.
+            </p>
+          </div>
+        </section>
+
       </main>
     </div>
   );
@@ -331,4 +432,78 @@ const paraStyle: React.CSSProperties = {
   textIndent: 36,
   marginBottom: 14,
   color: "#111",
+};
+
+const appendixBlock: React.CSSProperties = {
+  borderBottom: "1px dashed #ccc",
+  paddingBottom: 40,
+  marginBottom: 40,
+};
+
+const appendixLabel: React.CSSProperties = {
+  fontFamily: "Times New Roman, serif",
+  fontSize: 14,
+  fontWeight: "bold",
+  color: "#333",
+  marginBottom: 4,
+  marginTop: 0,
+};
+
+const appendixCaption: React.CSSProperties = {
+  fontFamily: "Times New Roman, serif",
+  fontSize: 13,
+  fontStyle: "italic",
+  color: "#444",
+  textAlign: "center",
+  marginBottom: 16,
+  marginTop: 0,
+};
+
+const imgWrap: React.CSSProperties = {
+  border: "1px solid #ddd",
+  borderRadius: 4,
+  overflow: "hidden",
+  marginBottom: 12,
+  textAlign: "center",
+  background: "#fafafa",
+};
+
+const imgStyle: React.CSSProperties = {
+  width: "100%",
+  maxHeight: 360,
+  objectFit: "cover",
+  display: "block",
+};
+
+const appendixDesc: React.CSSProperties = {
+  fontFamily: "Times New Roman, serif",
+  fontSize: 13,
+  lineHeight: 1.8,
+  color: "#555",
+  textAlign: "justify",
+  textIndent: 36,
+  margin: 0,
+};
+
+const tableStyle: React.CSSProperties = {
+  width: "100%",
+  borderCollapse: "collapse",
+  fontSize: 13,
+  fontFamily: "Times New Roman, serif",
+  marginTop: 12,
+};
+
+const thStyle: React.CSSProperties = {
+  border: "1px solid #bbb",
+  padding: "8px 12px",
+  textAlign: "center",
+  fontWeight: "bold",
+  fontSize: 13,
+};
+
+const tdStyle: React.CSSProperties = {
+  border: "1px solid #bbb",
+  padding: "7px 12px",
+  textAlign: "center",
+  fontSize: 13,
 };
