@@ -310,7 +310,7 @@ export default function Index() {
             </p>
             <div style={imgWrap}>
               <img
-                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/71034138-88d2-4c4d-bb10-d3398192f3aa.jpg"
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/1a86444e-7379-41e8-9bb0-8b1ed9fb820c.jpg"
                 alt="Сердечно-сосудистая система"
                 style={imgStyle}
               />
@@ -328,7 +328,7 @@ export default function Index() {
             </p>
             <div style={imgWrap}>
               <img
-                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/d97444fe-ad3e-461c-b308-404dc5c98d61.jpg"
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/5dee3725-e6fb-4683-8585-eb24bc7a47b8.jpg"
                 alt="Виды спорта"
                 style={imgStyle}
               />
@@ -346,7 +346,7 @@ export default function Index() {
             </p>
             <div style={imgWrap}>
               <img
-                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/6386be98-c640-451d-baaf-a40aead92281.jpg"
+                src="https://cdn.poehali.dev/projects/8028e71d-fc26-45fc-8bdd-b51de853d2b9/files/1a77b77d-4636-4d82-a25f-e39372c14b2a.jpg"
                 alt="Статистика здоровья"
                 style={imgStyle}
               />
