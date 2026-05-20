@@ -67,7 +67,7 @@ export default function Index() {
           ))}
         </nav>
         <div style={{ padding: "16px 24px", color: "rgba(255,255,255,0.7)", fontSize: 11, fontFamily: "Arial, sans-serif" }}>
-          2025 г.
+          2026 г.
         </div>
       </aside>
 
@@ -102,7 +102,7 @@ export default function Index() {
             </div>
 
             <div style={{ textAlign: "center", fontSize: 14, marginTop: 40 }}>
-              <p>с. Старая Криуша, 2025 г.</p>
+              <p>с. Старая Криуша, 2026 г.</p>
             </div>
           </div>
         </section>
