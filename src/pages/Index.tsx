@@ -51,7 +51,7 @@ export default function Index() {
                 padding: "10px 24px",
                 background: active === s.id ? "rgba(200,169,110,0.18)" : "transparent",
                 borderLeft: active === s.id ? "3px solid #c8a96e" : "3px solid transparent",
-                color: active === s.id ? "#c8a96e" : "rgba(255,255,255,0.55)",
+                color: active === s.id ? "#c8a96e" : "rgba(255,255,255,0.9)",
                 fontSize: 13,
                 fontFamily: "Arial, sans-serif",
                 cursor: "pointer",
@@ -66,7 +66,7 @@ export default function Index() {
             </button>
           ))}
         </nav>
-        <div style={{ padding: "16px 24px", color: "rgba(255,255,255,0.25)", fontSize: 11, fontFamily: "Arial, sans-serif" }}>
+        <div style={{ padding: "16px 24px", color: "rgba(255,255,255,0.7)", fontSize: 11, fontFamily: "Arial, sans-serif" }}>
           2025 г.
         </div>
       </aside>
@@ -130,8 +130,8 @@ export default function Index() {
                 ["Приложения", "12"],
               ].map(([name, page]) => (
                 <tr key={name}>
-                  <td style={{ color: "#222" }}>{name}</td>
-                  <td style={{ textAlign: "right", color: "#555", whiteSpace: "nowrap", paddingLeft: 8 }}>
+                  <td style={{ color: "#111" }}>{name}</td>
+                  <td style={{ textAlign: "right", color: "#111", whiteSpace: "nowrap", paddingLeft: 8 }}>
                     <span style={{ borderBottom: "1px dotted #999", display: "inline-block", width: "100%", minWidth: 120 }} />
                     {page}
                   </td>
@@ -298,7 +298,7 @@ export default function Index() {
         <section id="appendix" style={pageStyle}>
           <h2 style={chapterTitle}>ПРИЛОЖЕНИЯ</h2>
 
-          <p style={{ ...paraStyle, textIndent: 0, marginBottom: 32, color: "#444" }}>
+          <p style={{ ...paraStyle, textIndent: 0, marginBottom: 32, color: "#111" }}>
             В данном разделе представлены иллюстративные материалы, дополняющие основное содержание реферата.
           </p>
 
@@ -387,7 +387,7 @@ export default function Index() {
                 ))}
               </tbody>
             </table>
-            <p style={{ fontSize: 12, color: "#666", marginTop: 8, fontStyle: "italic", fontFamily: "Times New Roman, serif" }}>
+            <p style={{ fontSize: 12, color: "#333", marginTop: 8, fontStyle: "italic", fontFamily: "Times New Roman, serif" }}>
               Источник: ВОЗ. Глобальные рекомендации по физической активности для здоровья. — Женева, 2022.
             </p>
           </div>
@@ -453,7 +453,7 @@ const appendixCaption: React.CSSProperties = {
   fontFamily: "Times New Roman, serif",
   fontSize: 13,
   fontStyle: "italic",
-  color: "#444",
+  color: "#111",
   textAlign: "center",
   marginBottom: 16,
   marginTop: 0,
@@ -479,7 +479,7 @@ const appendixDesc: React.CSSProperties = {
   fontFamily: "Times New Roman, serif",
   fontSize: 13,
   lineHeight: 1.8,
-  color: "#555",
+  color: "#111",
   textAlign: "justify",
   textIndent: 36,
   margin: 0,
